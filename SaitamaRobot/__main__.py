@@ -53,7 +53,7 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *General in command! {}, myself {}!* 
-*An Anime themed group management bot from* [Akame ga Kill](https://anilist.co/anime/20613)!!
+*An Anime themed group management bot from* [Demon Slayer](https://en.wikipedia.org/wiki/Demon_Slayer:_Kimetsu_no_Yaiba)!!
 
 • *Uptime:* `{}`
 • `{}` *users, across* `{}` *chats.*
@@ -64,17 +64,17 @@ HELP_STRINGS = """
 *AI Chatbot*, *Anime*, *Music*, *Notes*, *Filters*, *NSFW* *and more!*
 
 🎛 *All commands can either be used with* `/` *or* `!`.
-🎛 *Reach out for support:* @EsDeathSupport 
+🎛 *Reach out for support:* @anime_realms_chats
 """.format(
     dispatcher.bot.first_name, ""
     if not ALLOW_EXCL else "\nAll commands can either be used with / or !.\n")
 
-KURISU_IMG = "https://telegra.ph/file/9a75aa001586ef41ff5b9.png"
-KURISUIMGSTART = "https://telegra.ph/file/41fe8e7f0aee49cbb1261.gif"
+KURISU_IMG = "https://telegra.ph/file/ce73feb46bacabe8bb743.jpg"
+KURISUIMGSTART = "https://telegra.ph/file/3461dfc2a85108209addb.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
 You can donate to the original writer of the Base code, Paul
-There are two ways of supporting him; [PayPal](paypal.me/PaulSonOfLars), or [Monzo](monzo.me/paulnionvestergaardlarsen)."""
+There are two ways of supporting him; [Achu biju](https://t.me/Yeageristbotsdev), or [Coder](https://t.me/Rengoku_sann_helper)."""
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -195,7 +195,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [[
                         InlineKeyboardButton(
-                            text="💞 Add EsDeath To Your Group",
+                            text="💞 Add 𝑹𝒆𝒏𝒈𝒐𝒌𝒖 𝑺𝒂𝒏 To Your Group",
                             url="t.me/{}?startgroup=true".format(
                                 context.bot.username))
                     ],
@@ -205,23 +205,23 @@ def start(update: Update, context: CallbackContext):
                              url=f"https://t.me/{SUPPORT_CHAT}"),
                          InlineKeyboardButton(
                              text="🎉 Updates",
-                             url="https://t.me/EsDeathupdates"),
+                             url="https://t.me/Anime_Realms"),
                          InlineKeyboardButton(
                              text="🗃 Guide",
-                             url="https://t.me/EsDeathupdates/6"),
+                             url="https://telegra.ph/%F0%9D%91%B9%F0%9D%92%86%F0%9D%92%8F%F0%9D%92%88%F0%9D%92%90%F0%9D%92%8C%F0%9D%92%96-%F0%9D%91%BA%F0%9D%92%82%F0%9D%92%8F-Basic-06-11"),
               
                     ],
                      [
                         InlineKeyboardButton(
-                             text="📍 Anime Chat",
-                             url="https://t.me/Kagesama_chat"),                    
+                             text="📍 Anime chat",
+                             url="https://t.me/Anime_Realms_Chats"),                    
                         InlineKeyboardButton(
                              text="❓ Help & Commands ❓",
-                             url="https://t.me/Generalesdeath_bot?start=help"),      
+                             url="https://t.me/RengokuKyujoro_RealmsBot?start=help"),      
                     ]]))
     else:
         update.effective_message.reply_video(
-                KURISUIMGSTART, caption="Esdeath is alive!\n<b>Haven't slept since:</b> <code>{}</code>".format(uptime), parse_mode=ParseMode.HTML)
+                KURISUIMGSTART, caption="𝑹𝒆𝒏𝒈𝒐𝒌𝒖 𝑺𝒂𝒏 is alive!\n<b>Haven't slept since:</b> <code>{}</code>".format(uptime), parse_mode=ParseMode.HTML)
         
 
 
@@ -538,7 +538,7 @@ def main():
 
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
-            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now online!](https://telegra.ph/file/41fe8e7f0aee49cbb1261.gif)", parse_mode=ParseMode.MARKDOWN)
+            dispatcher.bot.sendMessage(f"@{SUPPORT_CHAT}", "[I am now online!](https://telegra.ph/file/3764ef235105fc1421871.mp4)", parse_mode=ParseMode.MARKDOWN)
         except Unauthorized:
             LOGGER.warning(
                 "Bot isnt able to send message to support_chat, go and check!")
